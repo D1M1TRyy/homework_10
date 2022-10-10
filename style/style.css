@@ -1,0 +1,265 @@
+*::before,
+*::after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;   
+}
+body{
+    background: #E5E5E5;
+}
+header{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px black;
+}
+header nav{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+header nav .humburger{
+    display: none;
+    cursor: pointer;
+}
+header nav .nav-links{
+    width: 50%;
+}
+header nav .nav-links ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+header nav ul li{
+    font-size: 18px;
+    line-height: 27px;
+    transition: 1s;
+}
+header nav ul li a{
+    color: #000;
+    transition: 1s;
+}
+header nav ul li:hover a{
+    color: blue;
+}
+header nav ul .active a{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    header nav .nav-links{ 
+        display: none;    
+        position: absolute;
+        top: 59px;
+        left: 0%;
+        width: 50%;
+        height: 40%; 
+        background: #fff;
+        border-radius: 0 0px 20px 0;            
+    }
+    header nav .nav-links.active_nav{
+        display: block;
+    }
+    header nav .nav-links ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+    header nav .nav-links ul li{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        justify-content: space-between;
+        margin-left: 10%; 
+    }
+    header nav .nav-links ul li a{
+        font-size: 22px;
+    }
+    header nav .humburger{
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+.main{
+    width: 80%;
+    margin: auto;
+    height: 107%;
+}
+.main .text{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 9%;
+    margin-bottom: 8%;
+}
+.main .grid{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: 47% 20% 8% 25%; */
+    column-gap: 10%;
+}
+.main .grid .card1{
+    border: solid 1px black;
+    grid-area: 1/1/3/2;  
+}
+.main .grid .card1 .p1{
+    grid-area: 1/1/2/2;
+    padding: 3% 0;
+    padding-left: 3%;
+}
+.main .grid .card1 .p1 img{  
+    width: 97%;
+    height: 100%;
+}
+.main .grid .card1 .discription{
+    grid-area: 2/1/3/2;
+}
+.main .grid .card1 .discription .name{
+    grid-area: 2/1/3/2;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 3%;
+    margin-bottom: 7%;
+}
+.main .grid .card1 .discription .title{
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.main .grid .see-more1{
+    grid-area: 3/1/4/2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main .grid .see-more1 a{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2% 7%;
+    color: #000;
+}
+.main .grid .text{
+    grid-area: 4/1/5/2;
+    margin-top: 24%;
+}
+.main .grid .text ul li{
+    list-style: disc;
+    font-size: 65%;
+    line-height: 200%;
+}
+.main .grid .card2{
+    border: solid 1px black;
+    grid-area: 1/2/3/3;  
+}
+.main .grid .card2 .p1{
+    grid-area: 1/2/2/3;
+    padding: 3% 0;
+    padding-left: 3%;
+}
+.main .grid .card2 .p1 img{  
+    width: 97%;
+    height: 100%;
+}
+.main .grid .card2 .discription .name{
+    grid-area: 2/3/3/4;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 3%;
+    margin-bottom: 7%;
+}
+.main .grid .card2 .discription .title{
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.main .grid .see-more2{
+    grid-area: 3/2/4/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main .grid .see-more2 a{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2% 7%;
+    color: #000;
+}
+.main .grid .text-2{
+    grid-area: 4/2/5/3;
+    margin-top: 24%;
+    margin-left: 8%;
+}
+.main .grid .text-2 ul li{
+    list-style: disc;
+    font-size: 100%;
+    line-height: 200%;
+}
+.main .grid .card3{
+    border: solid 1px black;
+    grid-area: 1/3/3/4;  
+}
+.main .grid .card3 .p1{
+    grid-area: 1/3/2/4;
+    padding: 3% 0;
+    padding-left: 3%;
+}
+.main .grid .card3 .p1 img{  
+    width: 97%;
+    height: 100%;
+}
+.main .grid .card3 .discription .name{
+    grid-area: 2/2/3/3;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    margin-left: 3%;
+    margin-bottom: 7%;
+}
+.main .grid .card3 .discription .title{
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.main .grid .see-more3{
+    grid-area: 3/3/4/4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main .grid .see-more3 a{
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2% 7%;
+    color: #000;
+}
+.main .grid .text-3{
+    grid-area: 4/3/5/4;
+    margin-top: 24%;
+    margin-left: 8%;
+}
+.main .grid .text-3 ul li{
+    list-style: disc;
+    font-size: 100%;
+    line-height: 200%;
+}
+.more-product{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+.more-product a{
+    color: #000;
+    text-decoration: underline;
+}

@@ -1,0 +1,116 @@
+*::before,
+*::after,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #E5E5E5;
+}
+header{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px black;
+}
+header nav{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+header nav .humburger{
+    display: none;
+    cursor: pointer;
+}
+header nav .nav-links{
+    width: 50%;
+}
+header nav .nav-links ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+header nav ul li{
+    font-size: 18px;
+    line-height: 27px;
+    transition: 1s;
+}
+header nav ul li a{
+    color: #000;
+    transition: 1s;
+}
+header nav ul li:hover a{
+    color: blue;
+}
+header nav ul .active a{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    header nav .nav-links{ 
+        display: none;    
+        position: absolute;
+        top: 59px;
+        left: 0%;
+        width: 50%;
+        height: 40%; 
+        background: #fff;
+        border-radius: 0 0px 20px 0;            
+    }
+    header nav .nav-links.active_nav{
+        display: block;
+    }
+    header nav .nav-links ul{
+        height: 100%;
+        display: flex;
+        flex-direction: column; 
+    }
+    header nav .nav-links ul li{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        justify-content: space-between;
+        margin-left: 10%; 
+    }
+    header nav .nav-links ul li a{
+        font-size: 22px;
+    }
+    header nav .humburger{
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+.main .title{
+    display: flex;
+    justify-content: center;
+    padding-top: 11%;
+    margin-bottom: 9%;
+    color: #7D0000;
+}
+.main .text{
+    width: 80%;
+    margin: auto;
+}
+.main .text .about p{
+    
+    width: 44%;
+    font-size: 25px;
+    font-weight: 600;
+}
+.main .text .addres{
+    position: relative;
+    top: 100px;
+    left: 17%;
+}
+.main .text .addres p{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+}
+.main .text .picture{
+    position: absolute;
+    top: 60%;
+    left: 55%;
+}
